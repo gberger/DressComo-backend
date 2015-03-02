@@ -3,12 +3,16 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 
 gem 'rails-api'
+gem 'responders'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
 gem 'rspec-rails'
 gem 'factory_girl_rails'
+
+gem 'devise'
+gem 'simple_token_authentication'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt'
