@@ -16,6 +16,8 @@ gem 'factory_girl_rails'
 gem 'devise'
 gem 'simple_token_authentication'
 
+gem 'acts_as_votable', '~> 0.10.0'
+
 # To use ActiveModel has_secure_password
 gem 'bcrypt'
 
