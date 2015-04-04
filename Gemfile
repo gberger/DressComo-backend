@@ -32,3 +32,7 @@ gem 'unicorn'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem "spring", group: :development
+
+
+gem 'cloudinary'
+gem 'dotenv-rails'

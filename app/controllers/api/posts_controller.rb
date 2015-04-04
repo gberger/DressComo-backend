@@ -21,7 +21,7 @@ module Api
     def create
       @post = Post.new(post_params)
       @post.author = current_user
-  
+
       if @post.save
         render json: @post, status: :created
       else
@@ -57,7 +57,7 @@ module Api
   
       def post_params
         puts params
-        params.require(:post).permit(:text, :anonymous)
+        params.require(:post).permit(:text, :anonymous, :cloudinary_image_id)
       end
   end
 end

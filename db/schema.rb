@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150302224928) do
+ActiveRecord::Schema.define(version: 20150404055539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.integer  "author_id",                  null: false
-    t.boolean  "anonymous",  default: false
-    t.string   "text",       default: "",    null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.integer  "author_id",                           null: false
+    t.boolean  "anonymous",           default: false
+    t.string   "text",                default: "",    null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "cloudinary_image_id"
   end
 
   add_index "posts", ["author_id"], name: "index_posts_on_author_id", using: :btree
