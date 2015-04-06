@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     delete '/posts/:id/dislikes',   to: 'posts#undislike'
     
   end
+
+  match '*a', :to => 'errors#routing', via: [:get, :post, :put, :delete, :any]
 end
