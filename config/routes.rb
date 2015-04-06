@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :api do
-    devise_for :users
+
+    get    'profiles/:id',   to: 'profiles#show'
+    put    '/profiles/self', to: 'profiles#update'
 
     get    '/posts',      to: 'posts#index'
     post   '/posts',      to: 'posts#create'

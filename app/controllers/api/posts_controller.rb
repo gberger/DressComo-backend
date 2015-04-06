@@ -72,15 +72,15 @@ module Api
       head :no_content
     end
   
-    private
-  
-      def set_post
-        @post = Post.find(params[:id])
-      end
-  
-      def post_params
-        puts params
-        params.require(:post).permit(:text, :anonymous, :cloudinary_image_id)
-      end
+  private
+
+    def set_post
+      @post = Post.find(params[:id])
+    end
+
+    def post_params
+      puts params
+      params.require(:post).permit(:text, :anonymous, :cloudinary_image_id)
+    end
   end
 end
